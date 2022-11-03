@@ -1,4 +1,5 @@
-def is_isogram(text):
+def is_isogram():
+    text = input('Enter text: ')
     a=-len(text)
     for i in range(len(text)):
         num = text[i]
@@ -17,4 +18,4 @@ def is_isogram(text):
         print(True)
         return True
 
-is_isogram("")
+is_isogram()
