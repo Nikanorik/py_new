@@ -1,10 +1,18 @@
 def to_jaden_case(string):
-    new=string.title()
-    if "'" in new:
-        ber = new.find("'")
-    new_one = new.replace(new[ber+1],new[ber+1].lower())
+    string_new=string.split()
+    list_new=[]
+    for i in range(len(string_new)):
+        if "'" not in string_new[i]:
+            up_line = string_new[i].title()
+            list_new.append(up_line)
+        else:
+            result=''
+            list_two=string_new[i].split("'")
+            result+=list_two[0].title()+"'"+list_two[1]
+            list_new.append(result)
 
-    print(new_one)
+    return ' '.join(list_new)
+
 
 
 
