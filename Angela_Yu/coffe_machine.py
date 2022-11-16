@@ -57,12 +57,11 @@ def main():
         return money
 
 
-
+    result=0
 
     choice = input('What would you like!(espresso/latte/cappuccino) ').lower()
     while choice not in 'off':
     #What would you like?(expresso/latte/cappuccino)
-
         if choice == 'report':
             report()
             choice = input('What would you like!(espresso/latte/cappuccino) ').lower()
@@ -75,8 +74,8 @@ def main():
         elif choice == 'cappuccino':
             report_menu(choice)
             comparison_of_values(choice)
-        if resources["water"]>0 and resources["milk"]>0 and resources["coffee"]>0:
-            result = give_money()- MENU[choice]['cost']
+        if resources["water"]>=0 and resources["milk"]>=0 and resources["coffee"]>=0:
+            result += give_money()- MENU[choice]['cost']
             if result>0:
                 print('Thank you! Your drink is ready!')
                 report()
@@ -103,23 +102,6 @@ def main():
 
 
 
-
-
-
-
-
-#Turn off in coffee_machine ('off')
-
-
-# Check resourse
-
-
-
-# Remember that quarters = $0.25, dimes = $0.10, nickles = $0.05, pennies = $0.01
-
-# Transaction
-
-#Cook coffee
 
 if __name__ == '__main__':
     main()
