@@ -5,6 +5,7 @@ def main():
         "espresso": {
             "ingredients": {
                 "water": 50,
+                "milk":0,
                 "coffee": 18,
             },
             "cost": 1.5,
@@ -37,8 +38,11 @@ def main():
         print(f'Water: {resources["water"]}ml')
         print(f'Milk: {resources["milk"]}ml')
         print(f'Coffee: {resources["coffee"]}g')
-
-
+    def report_menu(choice):
+        print(f"Water: {MENU[choice]['ingredients']['water']}ml")
+        print(f"Milk: {MENU[choice]['ingredients']['milk']}ml")
+        print(f"Coffee: {MENU[choice]['ingredients']['coffee']}g")
+        print(f"Money: {MENU[choice]['cost']}$")
     def comparison_of_values(choice):
         resources["water"] = resources["water"] - MENU[choice]['ingredients']['water']
         resources["milk"] = resources["milk"] - MENU[choice]['ingredients']['milk']
@@ -55,27 +59,50 @@ def main():
 
 
 
-    choice = input('What would you like!(espresso/latte/capuccino) ').lower()
+    choice = input('What would you like!(espresso/latte/cappuccino) ').lower()
     while choice not in 'off':
-    #What would you like?(expresso/latte/capuccino)
+    #What would you like?(expresso/latte/cappuccino)
 
         if choice == 'report':
             report()
+            choice = input('What would you like!(espresso/latte/cappuccino) ').lower()
         elif choice == 'espresso':
+            report_menu(choice)
             comparison_of_values(choice)
         elif choice == 'latte':
+            report_menu(choice)
             comparison_of_values(choice)
-        elif choice == 'capuccino':
+        elif choice == 'cappuccino':
+            report_menu(choice)
             comparison_of_values(choice)
         if resources["water"]>0 and resources["milk"]>0 and resources["coffee"]>0:
             result = give_money()- MENU[choice]['cost']
             if result>0:
                 print('Thank you! Your drink is ready!')
-                choice = input('What would you like!(espresso/latte/capuccino) ').lower()
                 report()
                 print(f'Remainder Money: ${result:.2f}')
+                choice = input('What would you like!(espresso/latte/cappuccino) ').lower()
+
             else:
-                result = give_money() - MENU[choice]['cost']
+                while result < 0:
+                    print(f'Not enough money: {abs(result):.2f}')
+                    result += give_money()
+                print('Thank you! Your drink is ready!')
+                report()
+                print(f'Remainder Money: ${result:.2f}')
+                choice = input('What would you like!(espresso/latte/cappuccino) ').lower()
+        elif resources["water"]<0:
+            print('Sorry! Little water!!!')
+            choice='off'
+        elif resources["milk"]<0:
+            print('Sorry! Little milk!!!')
+            choice = 'off'
+        elif resources["coffee"]<0:
+            print('Sorry! Little coffee!!!')
+            choice = 'off'
+
+
+
 
 
 
