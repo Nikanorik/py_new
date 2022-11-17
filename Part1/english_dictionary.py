@@ -57,7 +57,19 @@ def main():
                   'rather': 'скорее', 'prepare': 'подготовить', 'as a rule': 'как правило', 'keep': 'хранить',
                   'argue': 'спорить', 'worry': 'волноваться', 'ruth': 'жалость',
                   'do not disturb him': 'не мешайте ему', 'gone with the wind': 'унесенные ветром',
-                  'hurry up': 'торопиться','busy':'занятый',}
+                  'hurry up': 'торопиться', 'busy': 'занятый',
+                  'there is a black car in front of my house': ' перед моим домом черная машина', 'may': 'можно',
+                  'should': 'следует', 'happen': 'случаться', 'it can be truth': 'это может быть правдой',
+                  'i can washh the dishes': 'я могу помыть посуду', 'i can happen today': 'это может случиться завтра',
+                  'be late': 'быть опаздавшим', 'drive and mend a car': 'водить и чинить машину',
+                  'ride a motorbike': 'ездить на мотоцикле', 'change the appearance': 'сменить внешнешность',
+                  'fly a plane': 'летать на самолете', 'take a pictures': 'делать фотографии',
+                  'speak some foreign languages': 'говорить на нескольких иностранных языках',
+                  'ski': 'кататься на лыжах', 'climb mountains': 'взбираться по горам',
+                  'play an instrument': 'играть на музыкальном инструменте', 'take a risk': 'рисковать',
+                  'it means': 'это значет', 'however': 'однако', 'do not worry': 'не беспокойся',
+                  'exciting': 'захватывающая', 'afraid': 'боюсь', 'how about': 'что насчет', 'be busy': 'быть занятым',
+                  'either': 'так же'}
     flag = True
     check_plus = 0
     check_minus = 0
