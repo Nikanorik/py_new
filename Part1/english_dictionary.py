@@ -69,7 +69,9 @@ def main():
                   'play an instrument': 'играть на музыкальном инструменте', 'take a risk': 'рисковать',
                   'it means': 'это значет', 'however': 'однако', 'do not worry': 'не беспокойся',
                   'exciting': 'захватывающая', 'afraid': 'боюсь', 'how about': 'что насчет', 'be busy': 'быть занятым',
-                  'either': 'так же'}
+                  'either': 'так же', 'move house': ' переезжать', 'quarter': 'четверть',
+                  'the day before yesterday': 'позавчера', 'three days ago': '3 дня назад', 'a year ago': 'год назад',
+                  'be born': ' быть рожденным', 'last time': 'последний раз', 'i was out':'быть на улице' }
     flag = True
     check_plus = 0
     check_minus = 0
