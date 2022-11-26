@@ -72,7 +72,10 @@ def main():
                   'either': 'так же', 'move house': ' переезжать', 'quarter': 'четверть',
                   'the day before yesterday': 'позавчера', 'three days ago': '3 дня назад', 'a year ago': 'год назад',
                   'be born': ' быть рожденным', 'last time': 'последний раз', 'i was out': 'быть на улице',
-                  'spend': 'проводить'}
+                  'spend': 'проводить',
+                  ' was your grandmother in the garden the day before yesterday': 'твоя бабушка была в саду позавчера?',
+                  'upset': 'расстроенный', 'awesome': 'классная', 'take the keys': 'брать ключи',
+                  'for everybody': 'для всех','wash the clothes':'стирать одежду','look for':'искать',}
     flag = True
     check_plus = 0
     check_minus = 0
