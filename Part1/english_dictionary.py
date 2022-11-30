@@ -75,7 +75,9 @@ def main():
                   'spend': 'проводить',
                   ' was your grandmother in the garden the day before yesterday': 'твоя бабушка была в саду позавчера?',
                   'upset': 'расстроенный', 'awesome': 'классная', 'take the keys': 'брать ключи',
-                  'for everybody': 'для всех','wash the clothes':'стирать одежду','look for':'искать',}
+                  'for everybody': 'для всех', 'wash the clothes': 'стирать одежду', 'look for': 'искать',
+                  'tiring': 'утомительно', 'unfortunately': 'к сожалению', 'in general': 'в общем и целом',
+                  'spelling': 'правописание','occasionally':'по случаю', }
     flag = True
     check_plus = 0
     check_minus = 0
