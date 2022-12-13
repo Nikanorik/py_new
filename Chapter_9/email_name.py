@@ -1,5 +1,7 @@
+import pickle
 def main():
-    email_dict = {}
+    new_dict_file = open('email_dict.dat','rb')
+    email_dict=pickle.load(new_dict_file)
     flag=True
     while flag:
         menu()
@@ -29,6 +31,9 @@ def main():
         elif question == 6:
             flag=False
     print(email_dict)
+    new_file=open('email_dict.dat','wb')
+    pickle.dump(email_dict,new_file)
+    new_file.close()
     print('Thank you! ')
 
 
