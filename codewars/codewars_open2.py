@@ -1,11 +1,17 @@
-def digitize(n):
-    list_int=[]
-    for i in str(n):
-        i=int(i)
-        list_int.append(i)
-    print(list_int[-1::-1])
+def get_sum(a,b):
+    sum=0
+    if b>a:
+        for i in range(a,b+1):
+            sum+=i
+    elif b<a:
+        for i in range(b,a+1):
+            sum+=i
+    elif a==b:
+        sum=a
+    print(sum)
 
 
 
 
-digitize(23582357)
+
+get_sum(-17,-17)
