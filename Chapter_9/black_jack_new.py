@@ -8,35 +8,50 @@ def main():
     denomination = ['Valet','Dama','King','Tuz']
     for i in range(2,11):
         denomination.append(str(i))
-    hand1=hand_main(denomination)
-    count1 = variant(hand1)
-    print(f'hand1 = {hand1} {random.choice(suit)} and count= {count1}')
-    hand1_new = so_card(count1,denomination)
-    print(f'count1= {hand1_new}')
-    hand2 = hand_main(denomination)
-    count2 = variant(hand2)
-    print(f'hand2 = {hand2} {random.choice(suit)} and count= {count2}')
-    hand2_new = so_card(count2,denomination)
-    print(f'count2= {hand2_new}')
+    summa1=function_card(denomination)
+    print(f'Hand user = {summa1} {mast(suit)}')
+    summa2 = function_card(denomination)
+    print(f'Hand comp = {summa2} {mast(suit)}')
+    if summa1>summa2 and summa1<=21:
+        print('Winner User!!!')
+    elif summa2>summa1 and summa2<=21:
+        print('Winner Comp!!!')
+    elif summa2==summa1 and summa2<=21:
+        print('Draw!!!')
+    elif summa2>21 and summa1<=21:
+        print('Winner User!!! Comp Bust!!!')
+    elif summa1>21 and summa2<=21:
+        print('Winner Comp!!! User Bust!!!')
+    else:
+        print('Double Bust!!!')
 
 
-
-
-def variant(denomination):
-    if denomination == 'Valet' or denomination=='Dama' or denomination == 'King' or denomination== 'Tuz':
+def hand(denomination):
+    hand_new=random.choice(denomination)
+    return hand_new
+def mast(suit):
+    mast_new=random.choice(suit)
+    return mast_new
+def count_one(count, summa):
+    if count=='Valet' or count=='King' or count=='Dama':
         return 10
+    elif count=='Tuz' and summa<=10:
+        return 11
+    elif count=='Tuz' and summa>10:
+        return 1
     else:
-        return int(denomination)
-def hand_main(denomination):
-    hand = random.choice(denomination)
-    return hand
-def so_card(count,denomination):
-    if count<=18:
-        new_hand= hand_main(denomination)
-        count+=variant(new_hand)
-        return count
-    else:
-        return count
+        return int(count)
+def function_card(denomination):
+    summa = 0
+    while summa <= 15:
+        count = hand(denomination)
+        amount = count_one(count, summa)
+        summa += amount
+    return summa
+
+
+
+
 
 
 
