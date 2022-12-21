@@ -11,7 +11,7 @@ def high(x):
             sum+=number
         list_n.append(sum)
 
-    return list[list_n.index(max(list_n))])
+    return list[list_n.index(max(list_n))]
 
 
 
