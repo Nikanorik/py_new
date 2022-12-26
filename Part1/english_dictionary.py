@@ -77,7 +77,7 @@ def main():
                   'upset': 'расстроенный', 'awesome': 'классная', 'take the keys': 'брать ключи',
                   'for everybody': 'для всех', 'wash the clothes': 'стирать одежду', 'look for': 'искать',
                   'tiring': 'утомительно', 'unfortunately': 'к сожалению', 'in general': 'в общем и целом',
-                  'spelling': 'правописание','occasionally':'по случаю', }
+                  'spelling': 'правописание','occasionally':'по случаю', 'tossing':'подбрасывание', }
     flag = True
     check_plus = 0
     check_minus = 0
