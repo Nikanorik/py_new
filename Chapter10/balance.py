@@ -8,5 +8,8 @@ class Balance:
             self.__balance-=amount
         else:
             print('You have small money!!!')
-    def get_balance(self):
-        return self.__balance
+    # def get_balance(self):
+    #     return self.__balance
+
+    def __str__(self):
+        return f'Your balance= {self.__balance}'
