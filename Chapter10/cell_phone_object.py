@@ -1,9 +1,14 @@
+import pickle
 from cell_phone import CellPhone
 
 
 def main():
+    file_new=open('ceel_phone.dat','wb')
     phones=make()
+    pickle.dump(phones,file_new)
     display(phones)
+    file_new.close()
+
 
 
 def make():
