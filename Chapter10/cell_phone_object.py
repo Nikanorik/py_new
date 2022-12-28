@@ -2,14 +2,28 @@ from cell_phone import CellPhone
 
 
 def main():
-    my_phone=input('Enter manufact phone: ')
-    my_model = input('Enter model phone: ')
-    my_price = float(input('Enter price phone: '))
-    phone=CellPhone(my_phone,my_model,my_price)
-    print(f'Your phone: {phone.get_manufact()}, model: {phone.get_model()}, price old: {phone.get_price()}')
-    new_price=float(input('Enter new price your phone: '))
-    phone.set_price(new_price)
-    print(f'Your phone: {phone.get_manufact()}, model: {phone.get_model()}, price new: {phone.get_price()}')
+    phones=make()
+    display(phones)
+
+
+def make():
+    list_phone=[]
+    for i in range(1,6):
+        my_phone=input('Enter manufact phone: ')
+        my_model = input('Enter model phone: ')
+        my_price = float(input('Enter price phone: '))
+        phone=CellPhone(my_phone,my_model,my_price)
+        list_phone.append(phone)
+    return list_phone
+def display(phones):
+    for i in phones:
+        print(i.get_manufact())
+        print(i.get_model())
+        print(i.get_price())
+        print('_________________________')
+
+
+
 
 
 
